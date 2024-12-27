@@ -6,11 +6,13 @@ module.exports = {
       ny: 'inset 0 -7px 0 0 #10212A',
       'btn-yellow': 'inset 0 -7px 0 0 #CC8B14',
       'btn-blue': 'inset 0 -7px 0 0 #118C87',
+      'btn-reset': 'inset 0 -5px 0 0 #6B8997',
     },
     letterSpacing: {
       xs: '0.88px',
       s: '1px',
       m: '1.25px',
+      lg: '1.5px'
     },
     extend: {
       colors: {
@@ -27,7 +29,16 @@ module.exports = {
         'outfit': ['Outfit', 'sans-serif'],
       },
       height: {
-        17: '67px'
+        17: '67px',
+        13: '52px',
+        md: '140px'
+      },
+      width: {
+        13: '52px',
+        md: '140px'
+      },
+      borderRadius: {
+
       }
     },
   },

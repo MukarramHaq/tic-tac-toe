@@ -11,9 +11,9 @@
 </head>
 <body class="bg-navy font-outfit text-silver p-4 flex flex-col items-center justify-center h-screen">
 
-  <main class="w-full md:flex md:flex-col md:max-w-md">
+  <main class="w-full md:flex md:flex-col md:max-w-md lg:min-w-[460px]">
     
-    <section class="flex flex-col items-center gap-8 md:gap-10">
+    <section class="hidden flex flex-col items-center gap-8 md:gap-10">
 
       
       <div class="flex gap-2">
@@ -24,7 +24,7 @@
       <div class="flex flex-col items-center gap-6 bg-navy-hover w-full shadow-ny rounded-2xl p-6">
         <h1 class="text-base font-semibold uppercase tracking-s">Pick player 1's mark</h1>
         <div class="bg-navy w-full text-center rounded-xl p-2 flex">
-          <button class="w-full flex items-center justify-center h-14 rounded-lg">
+          <button class="w-full flex items-center justify-center h-14 rounded-lg hover:bg-navy-hover">
             <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#A8BFC9" fill-rule="evenodd"/></svg>
           </button>
           <button class="w-full flex items-center justify-center h-14 rounded-lg bg-silver">
@@ -35,12 +35,93 @@
       </div>
 
       <div class="w-full flex flex-col gap-4 font-semibold text-navy text-base tracking-s md:gap-5 md:text-xl md:tracking-m">
-        <button class="bg-yellow font-semibold uppercase h-14 rounded-2xl shadow-btn-yellow pb-1 md:h-17">
+        <button class="bg-yellow font-semibold uppercase h-14 rounded-2xl shadow-btn-yellow pb-1 md:h-17 hover:bg-yellow-hover">
           New Game (vs CPU)
         </button>
-        <button class="bg-blue uppercase h-14 rounded-2xl shadow-btn-blue pb-1 md:h-17">
+        <button class="bg-blue uppercase h-14 rounded-2xl shadow-btn-blue pb-1 md:h-17 hover:bg-blue-hover">
           New Game (vs player)
         </button>
+      </div>
+
+    </section>
+
+    <!-- Mobile, Tablet and Desktop - Game (solo) -->
+    <section class="flex flex-col justify-self-center ">
+
+      <div class="flex justify-between items-center mb-20 md:m-0">
+        <div class="flex gap-2">
+          <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#31C3BD" fill-rule="evenodd"/></svg>
+          <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="#F2B137"/></svg>
+        </div>
+        <button class="flex h-10 uppercase min-w-24 items-center justify-center gap-2 bg-navy-hover shadow-ny rounded-md pb-1 relative right-4 md:right-[9px] md:w-[140px] md:h-12">
+          <svg width="16" height="16" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#A8BFC9" fill-rule="evenodd"/></svg>
+          <p class="text-sm font-semibold tracking-sm">turn</p>
+        </button>
+        <button class="w-10 h-10 bg-silver flex items-center justify-center rounded-md shadow-btn-reset md:h-13 md:w-13 cursor-pointer hover:bg-silver-hover">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M19.524 0h-1.88a.476.476 0 0 0-.476.499l.159 3.284A9.81 9.81 0 0 0 9.835.317C4.415.317-.004 4.743 0 10.167.004 15.597 4.406 20 9.835 20a9.796 9.796 0 0 0 6.59-2.536.476.476 0 0 0 .019-.692l-1.348-1.349a.476.476 0 0 0-.65-.022 6.976 6.976 0 0 1-9.85-.63 6.987 6.987 0 0 1 .63-9.857 6.976 6.976 0 0 1 10.403 1.348l-4.027-.193a.476.476 0 0 0-.498.476v1.881c0 .263.213.476.476.476h7.944A.476.476 0 0 0 20 8.426V.476A.476.476 0 0 0 19.524 0Z" fill="#1F3641"/></svg>
+        </button>
+      </div>
+
+      <!-- Playing Board -->
+      <div class="grid grid-cols-3 gap-5 mt-4 uppercase">
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+          <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
+          </div>
+        </div>
+        
+        <div class="w-24 h-16 flex flex-col justify-center items-center bg-blue rounded-lg md:w-md">
+          <p class="text-sm text-navy tracking-xs">X (You)</p>
+          <h3 class="font-bold text-navy text-xl tracking-m md:text-2xl md:tracking-lg">0</h3>
+        </div>
+        <div class="w-24 h-16 flex flex-col justify-center items-center bg-silver rounded-lg md:w-md">
+          <p class="text-sm text-navy tracking-xs">Ties</p>
+          <h3 class="font-bold text-navy text-xl tracking-m md:text-2xl md:tracking-lg">0</h3>
+        </div>
+        <div class="w-24 h-16 flex flex-col justify-center items-center bg-yellow rounded-lg md:w-md">
+          <p class="text-sm text-navy tracking-xs">0 (cpu)</p>
+          <h3 class="font-bold text-navy text-xl tracking-m md:text-2xl md:tracking-lg">0</h3>
+        </div>
       </div>
 
     </section>
