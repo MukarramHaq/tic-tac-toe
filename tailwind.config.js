@@ -2,6 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    boxShadow: {
+      ny: 'inset 0 -7px 0 0 #10212A',
+      'btn-yellow': 'inset 0 -7px 0 0 #CC8B14',
+      'btn-blue': 'inset 0 -7px 0 0 #118C87',
+    },
+    letterSpacing: {
+      xs: '0.88px',
+      s: '1px',
+      m: '1.25px',
+    },
     extend: {
       colors: {
         blue: '#31C3BD',
@@ -13,6 +23,12 @@ module.exports = {
         silver: '#A8BFC9',
         'silver-hover': '#D8E8ED'
       },
+      fontFamily: {
+        'outfit': ['Outfit', 'sans-serif'],
+      },
+      height: {
+        17: '67px'
+      }
     },
   },
   plugins: [],
