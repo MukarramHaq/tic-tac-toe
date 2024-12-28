@@ -13,7 +13,7 @@
 
   <main class="w-full md:flex md:flex-col md:max-w-md lg:min-w-[460px]">
     
-    <section class="hidden flex flex-col items-center gap-8 md:gap-10">
+    <section class="welcome-screen flex flex-col items-center gap-8 md:gap-10">
 
       
       <div class="flex gap-2">
@@ -24,18 +24,18 @@
       <div class="flex flex-col items-center gap-6 bg-navy-hover w-full shadow-ny rounded-2xl p-6">
         <h1 class="text-base font-semibold uppercase tracking-s">Pick player 1's mark</h1>
         <div class="bg-navy w-full text-center rounded-xl p-2 flex">
-          <button class="w-full flex items-center justify-center h-14 rounded-lg hover:bg-navy-hover">
-            <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#A8BFC9" fill-rule="evenodd"/></svg>
+          <button class="x-btn w-full flex items-center justify-center h-14 rounded-lg hover:bg-navy-hover">
+            <svg class="x-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#A8BFC9" fill-rule="evenodd"/></svg>
           </button>
-          <button class="w-full flex items-center justify-center h-14 rounded-lg bg-silver">
-            <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="#1A2A33"/></svg>
+          <button class="o-btn w-full flex items-center justify-center h-14 rounded-lg bg-silver hover:bg-navy-hover">
+            <svg class="o-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="#1A2A33"/></svg>
           </button>
         </div>
         <p class="uppercase tracking-xs text-sm">Remember : X goes first</p>
       </div>
 
       <div class="w-full flex flex-col gap-4 font-semibold text-navy text-base tracking-s md:gap-5 md:text-xl md:tracking-m">
-        <button class="bg-yellow font-semibold uppercase h-14 rounded-2xl shadow-btn-yellow pb-1 md:h-17 hover:bg-yellow-hover">
+        <button class="cpu-btn bg-yellow font-semibold uppercase h-14 rounded-2xl shadow-btn-yellow pb-1 md:h-17 hover:bg-yellow-hover">
           New Game (vs CPU)
         </button>
         <button class="bg-blue uppercase h-14 rounded-2xl shadow-btn-blue pb-1 md:h-17 hover:bg-blue-hover">
@@ -45,8 +45,8 @@
 
     </section>
 
-    <!-- Mobile, Tablet and Desktop - Game (solo) -->
-    <section class="flex flex-col justify-self-center ">
+    <!-- Mobile, Tablet and Desktop - Game (solo & multiplayer maybe?) -->
+    <section class="game-screen hidden flex-col justify-self-center ">
 
       <div class="flex justify-between items-center mb-20 md:m-0">
         <div class="flex gap-2">
@@ -64,54 +64,54 @@
 
       <!-- Playing Board -->
       <div class="grid grid-cols-3 gap-5 mt-4 uppercase">
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
-        <div class="flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
+        <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
           <div class="opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
         </div>
         
         <div class="w-24 h-16 flex flex-col justify-center items-center bg-blue rounded-lg md:w-md">
-          <p class="text-sm text-navy tracking-xs">X (You)</p>
+          <p class="bottom-left text-sm text-navy tracking-xs">O (You)</p>
           <h3 class="font-bold text-navy text-xl tracking-m md:text-2xl md:tracking-lg">0</h3>
         </div>
         <div class="w-24 h-16 flex flex-col justify-center items-center bg-silver rounded-lg md:w-md">
@@ -119,7 +119,7 @@
           <h3 class="font-bold text-navy text-xl tracking-m md:text-2xl md:tracking-lg">0</h3>
         </div>
         <div class="w-24 h-16 flex flex-col justify-center items-center bg-yellow rounded-lg md:w-md">
-          <p class="text-sm text-navy tracking-xs">0 (cpu)</p>
+          <p class="bottom-right text-sm text-navy tracking-xs">X (cpu)</p>
           <h3 class="font-bold text-navy text-xl tracking-m md:text-2xl md:tracking-lg">0</h3>
         </div>
       </div>
@@ -160,6 +160,8 @@
   Yes, restart -->
 
   <!-- Game board end -->
+
+  <script src="./index.js" defer></script>
 
 </body>
 </html>
