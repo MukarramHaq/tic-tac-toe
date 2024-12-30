@@ -833,16 +833,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .font-bold{
   font-weight: 700;
 }
@@ -880,11 +870,6 @@ video {
 .text-yellow{
   --tw-text-opacity: 1;
   color: rgb(242 177 55 / var(--tw-text-opacity, 1));
-}
-
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0{
@@ -943,11 +928,6 @@ video {
 .hover\:bg-yellow-hover:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(255 200 96 / var(--tw-bg-opacity, 1));
-}
-
-.hover\:text-red-700:hover{
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity, 1));
 }
 
 .group:hover .group-hover\:visible{
