@@ -27,7 +27,7 @@
           <button class="x-btn w-full flex items-center justify-center h-14 rounded-lg hover:bg-navy-hover">
             <svg class="x-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#A8BFC9" fill-rule="evenodd"/></svg>
           </button>
-          <button class="o-btn w-full flex items-center justify-center h-14 rounded-lg bg-silver hover:bg-navy-hover">
+          <button class="o-btn w-full flex items-center justify-center h-14 rounded-lg bg-silver ">
             <svg class="o-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="#1A2A33"/></svg>
           </button>
         </div>
@@ -57,7 +57,7 @@
           <svg width="16" height="16" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#A8BFC9" fill-rule="evenodd"/></svg>
           <p class="text-sm font-semibold tracking-sm">turn</p>
         </button>
-        <button class="w-10 h-10 bg-silver flex items-center justify-center rounded-md shadow-btn-reset md:h-13 md:w-13 cursor-pointer hover:bg-silver-hover">
+        <button class="restart-btn w-10 h-10 bg-silver flex items-center justify-center rounded-md shadow-btn-reset md:h-13 md:w-13 cursor-pointer hover:bg-silver-hover">
           <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M19.524 0h-1.88a.476.476 0 0 0-.476.499l.159 3.284A9.81 9.81 0 0 0 9.835.317C4.415.317-.004 4.743 0 10.167.004 15.597 4.406 20 9.835 20a9.796 9.796 0 0 0 6.59-2.536.476.476 0 0 0 .019-.692l-1.348-1.349a.476.476 0 0 0-.65-.022 6.976 6.976 0 0 1-9.85-.63 6.987 6.987 0 0 1 .63-9.857 6.976 6.976 0 0 1 10.403 1.348l-4.027-.193a.476.476 0 0 0-.498.476v1.881c0 .263.213.476.476.476h7.944A.476.476 0 0 0 20 8.426V.476A.476.476 0 0 0 19.524 0Z" fill="#1F3641"/></svg>
         </button>
       </div>
@@ -65,7 +65,7 @@
       <!-- Playing Board -->
       <div class="grid grid-cols-3 gap-5 mt-4 uppercase">
         <div class="game-board flex justify-center items-center w-24 h-24 md:w-md md:h-md shadow-ny rounded-2xl bg-navy-hover cursor-pointer group">
-          <div class="x-element opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <div class="x-element hover-properties">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z" stroke="#31C3BD" stroke-width="2" fill="none"/></svg>
           </div>
           <div class="o-element hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -154,6 +154,29 @@
     </section>
 
   </main>
+
+   <!-- LightBox -->
+   <div class="lightbox hidden fixed z-1000 top-0 w-full h-full bg-black bg-opacity-80 flex-col justify-center items-center min-h-svh">
+    <div class="w-full flex flex-col items-center bg-navy py-12 pl-12 pr-[43px]">
+      <div class="flex flex-col items-center w-full md:max-w-[491px]">
+        <p class="who-won text-sm tracking-xs uppercase mb-4 md:text-base">Oh no, you lost...</p>
+        <div class="flex gap-2 mb-6 md:gap-6">
+          <svg class="o-won self-center md:w-16 md:h-16" width="30" height="30" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z" fill="#F2B137"/>
+          </svg>
+          <svg class="x-won hidden self-center md:w-16 md:h-16" width="30" height="30" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#31C3BD" fill-rule="evenodd"/></svg>
+          </svg>
+          <h2 class="takes-round self-center uppercase text-2xl text-yellow tracking-m font-bold md:text-[40px] md:tracking-[2.5px] md:font-semibold">takes the round</h2>
+        </div>
+        <div class="flex gap-4">
+          <button class="bg-silver text-navy text-base uppercase font-semibold min-h-14 px-4 rounded-xl shadow-btn-reset">Quit</button>
+          <button class="bg-yellow text-navy text-base uppercase font-semibold min-h-14 px-4 rounded-xl shadow-btn-yellow">Next Round</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
   <!-- New game menu start -->
 

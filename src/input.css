@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .hover-properties{
+        @apply opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300;
+    }
+}
