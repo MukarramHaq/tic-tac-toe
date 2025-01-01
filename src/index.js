@@ -9,6 +9,8 @@ const turnSvgEl = document.querySelector('.turn-svg');
 
 // Lightbox elements
 const lightboxEl = document.querySelector('.lightbox');
+const innerLightBoxEl = document.querySelector('.inner-lightbox');
+const lightBoxRestartEl  = document.querySelector('.lightbox-restart');
 const whoWonEl = document.querySelector('.who-won');
 const oWonEl = document.querySelector('.o-won');
 const xWonEl = document.querySelector('.x-won');
@@ -62,6 +64,19 @@ restartBtnEl.addEventListener('click', () => {
             turnSvgEl.innerHTML = `<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#A8BFC9" fill-rule="evenodd"/></svg>`  
         }
     });
+
+    // lightboxEl.style.display = 'flex'
+    // innerLightBoxEl.innerHTML = ""
+    // innerLightBoxEl.innerHTML = `
+    //     <h2 class="text-2xl tracking-lg font-semibold uppercase mb-6 md:text-[40px] md:tracking-xl md:mb-8">Restart Game?</h2>
+    //     <div class="flex gap-4">
+    //       <button class="bg-silver text-navy text-base uppercase font-semibold min-h-14 px-4 pb-1 rounded-xl shadow-btn-reset">No, Cancel</button>
+    //       <button class="bg-yellow text-navy text-base uppercase font-semibold min-h-14 px-4 pb-1 rounded-xl shadow-btn-yellow">Yes, Restart</button>
+    //     </div>
+
+    // `
+
+    lightBoxRestartEl.style.display = 'flex';
 
     if(oSelected){
         setTimeout(() => cpuMove(board), 1000);

@@ -12,7 +12,8 @@ module.exports = {
       xs: '0.88px',
       s: '1px',
       m: '1.25px',
-      lg: '1.5px'
+      lg: '1.5px',
+      xl: '2.5px'
     },
     extend: {
       colors: {
