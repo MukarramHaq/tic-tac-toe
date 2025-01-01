@@ -987,16 +987,8 @@ video {
     width: 4rem;
   }
 
-  .md\:w-\[140px\]{
-    width: 140px;
-  }
-
   .md\:w-md{
     width: 140px;
-  }
-
-  .md\:w-\[139px\]{
-    width: 139px;
   }
 
   .md\:max-w-\[491px\]{
