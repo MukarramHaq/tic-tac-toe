@@ -22,6 +22,7 @@ const takesRoundEl = document.querySelector(".takes-round");
 
 // New Game buttons
 const cpuBtnElement = document.querySelector(".cpu-btn");
+const playerBtnElement = document.querySelector('.player-btn')
 
 // Welcome and game screens
 const welcomeScreenElement = document.querySelector(".welcome-screen");
@@ -103,6 +104,30 @@ oBtnElement.addEventListener("click", () => {
   xSvgElement.querySelector("path").setAttribute("fill", "#A8BFC9");
 });
 
+const handleClick = () => {
+    console.log(handleClick);
+}
+
+// Playing against another player
+playerBtnElement.addEventListener('click', () => {
+    welcomeScreenElement.style.display = "none";
+    gameScreenElement.style.display = "flex";
+
+    if(xSelected){
+        bottomLeftElement.textContent = 'X (P1)';
+        bottomRightElement.textContent = 'O (P2)';
+        gameBoardElement.forEach(element => {
+            element.addEventListener('click', () => {
+                element.innerHTML = `<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><path d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z" fill="#31C3BD" fill-rule="evenodd"/></svg>`;
+            })
+        })
+    }else{
+        bottomRightElement.textContent = 'O (P1)';
+        bottomLeftElement.textContent = 'X (P2)';
+    }
+
+})
+
 // Playing against the CPU
 cpuBtnElement.addEventListener("click", () => {
   welcomeScreenElement.style.display = "none";
@@ -149,7 +174,7 @@ cpuBtnElement.addEventListener("click", () => {
 });
 
 quitBtnEl.addEventListener("click", () => {
-    window.location.href = window.location.href; // Redirects to the same URL and resets everything
+  window.location.href = window.location.href; // Redirects to the same URL and resets everything
 });
 
 // Helper functions from here
@@ -335,13 +360,10 @@ const lightboxDisplay = (winner) => {
     xWonEl.classList.add("hidden");
     oWonEl.classList.add("hidden");
   }
-
-  // Common message for all cases
-  // takesRoundEl.textContent = 'takes the round';
 };
 
 const restartGame = () => {
-  lightBoxRestartEl.style.display = "flex";
+    lightBoxRestartEl.style.display = "flex";
 
   // This is to remove the previous event listener. This avoids the CPU making multiple moves
   restartBtnConfirmEl.removeEventListener("click", handleRestartClick);
@@ -376,5 +398,3 @@ const handleRestartClick = () => {
     setTimeout(() => cpuMove(board), 1000);
   }
 };
-
-// Next Round Implmentation
